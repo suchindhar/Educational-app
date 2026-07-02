@@ -2,13 +2,6 @@
   <img src="https://img.shields.io/badge/⚖️-LawVexia-1E3A5F?style=for-the-badge&labelColor=D4A574&color=1E3A5F" alt="LawVexia"/>
 </p>
 
-<h1 align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nicedoc/awesome-readme/master/dark-logo.svg">
-    <img alt="LawVexia" src="https://raw.githubusercontent.com/nicedoc/awesome-readme/master/light-logo.svg" width="0" height="0">
-  </picture>
-</h1>
-
 <p align="center">
   <em>Learn Law Smarter — Constitutional Law I, gamified.</em>
 </p>
@@ -165,5 +158,5 @@ Contributions welcome! Feel free to open issues or PRs.
 ---
 
 <p align="center">
-  Made with ❤️ for law students
+  Made for law students
 </p>
