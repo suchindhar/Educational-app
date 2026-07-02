@@ -1,0 +1,53 @@
+<!--
+  Add these inside <manifest> in:
+  android/app/src/main/AndroidManifest.xml
+
+  The <uses-permission> tags go BEFORE <application>
+  The <provider> tag goes INSIDE <application>
+-->
+
+<!-- File access permissions -->
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    android:maxSdkVersion="28"/>
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+<uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+<uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+
+<!--
+  Inside <application android:...>
+  Add this FileProvider for file_picker plugin:
+-->
+<provider
+    android:name="androidx.core.content.FileProvider"
+    android:authorities="${applicationId}.fileprovider"
+    android:exported="false"
+    android:grantUriPermissions="true">
+    <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_paths"/>
+</provider>
+
+<!--
+  Also create: android/app/src/main/res/xml/file_paths.xml
+  with this content:
+-->
+<!-- file_paths.xml content: -->
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path name="external_files" path="."/>
+    <cache-path name="cache" path="."/>
+    <files-path name="files" path="."/>
+    <external-cache-path name="external_cache" path="."/>
+    <external-files-path name="external_files_path" path="."/>
+</paths>
+-->
+
+<!-- Set minSdkVersion to 21 in android/app/build.gradle:
+     defaultConfig {
+         minSdkVersion 21
+         targetSdkVersion 34
+     }
+-->

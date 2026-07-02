@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  MERGE these keys into your existing ios/Runner/Info.plist
+  Do NOT replace the whole file – just add these keys inside the <dict> tag
+-->
+<plist version="1.0">
+<dict>
+
+  <!-- App name – change to your actual app name -->
+  <key>CFBundleDisplayName</key>
+  <string>LawVexia</string>
+
+  <!-- File picker / PDF permissions -->
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>Access photos to select PDF files for upload</string>
+
+  <key>NSDocumentsFolderUsageDescription</key>
+  <string>Access documents to select and upload PDF notes</string>
+
+  <key>LSSupportsOpeningDocumentsInPlace</key>
+  <true/>
+
+  <key>UIFileSharingEnabled</key>
+  <true/>
+
+  <!-- URL schemes for Supabase auth (deep link) -->
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>io.supabase.lexquest</string>
+      </array>
+    </dict>
+  </array>
+
+</dict>
+</plist>
